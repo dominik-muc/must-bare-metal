@@ -78,6 +78,10 @@ Instruction parse(u8 buf[]) {
 }
 
 volatile i32 main() {
+    
+    // initialize pico stdio so that we can use UART easily
+    init_pico_stdio();
+    
     u8 buf[255];
     for (i32 i = 0; i < 500000; i++)
         ;
