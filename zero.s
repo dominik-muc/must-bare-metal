@@ -3,6 +3,6 @@
 
 .section .text
 _start:
-    movabsq $__stack_top, %rsp  # load address into stack pointer
+    la sp, __stack_top  # load address into stack pointer
     call main
-    jmp .                 # infinite loop
+    j .                 # infinite loop
