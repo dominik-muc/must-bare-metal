@@ -1,4 +1,5 @@
 
+#include "err.h"
 #include "io.h"
 #include "types.h"
 #include "uart.h"
@@ -44,6 +45,7 @@ i32 dec(u8 c) {
     case '9':
         return 9;
     default:
+        panic((u8*)"Can't parse character into a digit (dec function)");
         return -1;
     };
 }
@@ -70,9 +72,7 @@ Instruction parse(u8 buf[]) {
         i.a1 = a1;
         break;
     default:
-        print_line((u8*)"Kernel panic: Unknown instruction");
-        while (true)
-            ;
+        panic((u8*)"Unknown instruction");
     };
     return i;
 }

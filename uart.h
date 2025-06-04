@@ -1,4 +1,3 @@
-#pragma once
 #include "types.h"
 
 void uart_putchar(u8 c);
