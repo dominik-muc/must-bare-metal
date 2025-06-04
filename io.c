@@ -17,3 +17,16 @@ void get_line(u8 buf[]) {
         }
     }
 }
+
+void print(u8 str[]) {
+    while (*str) {
+        uart_putchar(*str);
+        str++;
+    }
+}
+
+void print_line(u8 str[]) {
+    print(str);
+    uart_putchar('\r');
+    uart_putchar('\n');
+}
