@@ -1,0 +1,6 @@
+---
+TabWidth: 4
+UseTab: Never
+IndentWidth: 4
+PointerAlignment: Left
+AccessModifierOffset: -4
