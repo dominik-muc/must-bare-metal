@@ -1,0 +1,11 @@
+[package]
+name = "must-bare-metal"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "rust-kernel"
+path = "src/main.rs"
+test = false
+doctest = false
+bench = false
