@@ -9,3 +9,8 @@ path = "src/main.rs"
 test = false
 doctest = false
 bench = false
+
+[dependencies]
+riscv = "0.13.0"
+sbi = "0.3.0"
+fdt = "0.1.5"

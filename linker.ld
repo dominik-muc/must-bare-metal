@@ -1,5 +1,5 @@
 MEMORY {
-  kernel (rwx) : ORIGIN = 0x80200000, LENGTH = 4M
+  kernel (rwx) : ORIGIN = 0x80200000, LENGTH = 128K
 }
 
 SECTIONS {
@@ -30,6 +30,6 @@ SECTIONS {
 
   . = ALIGN(16);
   __heap_start = .;
-  . = . + 16K;
+  . = . + 1K;
   __heap_end = .;
 }
